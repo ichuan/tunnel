@@ -1,0 +1,21 @@
+[tool.black]
+# https://github.com/python/black#configuration-format
+skip-string-normalization = true
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | node_modules/
+)
+'''
